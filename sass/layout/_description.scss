@@ -1,49 +1,70 @@
 /* ========================= Section Description ====================== */
-.section-description{
+.section-description {
   @extend %section;
 }
-.list-description{
+
+.list-description {
   @extend %lists;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: inherit;
   justify-content: space-between;
-  &__box{
-    max-width: 270px;
+  &__box {
+    max-width: 450px;
+    margin-bottom: 30px;
   }
-  &__second-list{
+  &__second-list {
     @extend %lists;
   }
-  &__element{
+  &__element {
     display: flex;
 
-    &:first-of-type{
+    &:first-of-type {
       justify-content: center;
       margin-bottom: 30px;
       background-color: var(--team-bg-color);
     }
-
   }
-  &__icon{
+  &__icon {
     text-align: center;
     margin: 25px 0;
     width: 70px;
     height: 70px;
     align-self: center;
   }
-  &__header{
+  &__header {
     font-weight: 700;
     line-height: var(--line-height-small);
     margin-bottom: 10px;
     font-size: 14px;
-
+    text-align: center;
+    width: 100%;
   }
-  &__paragraph{
-    font-size:14px;
+  &__paragraph {
+    font-size: 14px;
     line-height: var(--line-height-big);
     color: var(--nav-second-color);
     letter-spacing: 0.03em;
-
   }
 }
-/* ========== END Section Description ======== */
-
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .list-description {
+    &__box {
+      max-width: 354px;
+    }
+    &__header {
+      text-align: left;
+    }
+  }
+}
+  @media screen and (min-width: 1200px) {
+    .list-description {
+      &__box {
+        max-width: 270px;
+      }
+       &__header {
+      text-align: left;
+    }
+    }
+  }

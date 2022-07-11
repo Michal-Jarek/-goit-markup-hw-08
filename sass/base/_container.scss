@@ -1,4 +1,5 @@
 /* ====================== Main Container ===================== */
+/*
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -6,5 +7,36 @@
   align-items: center;
   margin: 0 auto;
 }
+
+
+
+
+*/
 /* ============= END Main Container ============ */
 
+.container {
+  width: 100%;
+  padding: 0 10px;
+  display:flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container{
+    max-width: 480px;
+    padding: 0 15px;    
+  }  
+}
+@media screen and (min-width: 768px) {
+  .container{
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+  @media screen and (min-width: 1200px) {
+  .container{
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}

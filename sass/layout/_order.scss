@@ -1,30 +1,95 @@
 /* ========================= Section Order ====================== */
 .section-order {
   @extend %section;
-  padding: 200px 0;
-  
+  padding: 118px 0;
   background-color: var(--dark-motive);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/studio/background.jpg");
+    url("../images/studio/section_order/order_mobile_bg_480.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
- 
-  &__header{
-    font-size: 44px;
+  background-position: center center;
+
+  &__header {
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.364;
+    text-align: center;
+    line-height: 1.615;
     color: var(--logo-white-color);
     letter-spacing: 0.06em;
     margin-bottom: 30px;
-    width: 696px;
+    max-width: 365px;
   }
-  &__container{
+  &__container {
     flex-direction: column;
     text-align: center;
   }
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/studio/section_order/order_mobile_bg_480@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .section-order {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/studio/section_order/order_mobile_bg_768.jpg");
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-order {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/studio/section_order/order_mobile_bg_768@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-order {
+    padding: 200px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/studio/section_order/order_desk_bg_1600.jpg");
+    &__header {
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1.364;
+      color: var(--logo-white-color);
+      letter-spacing: 0.06em;
+      margin-bottom: 30px;
+      max-width: 696px;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-order {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/studio/section_order/order_desk_bg_1600@2x.jpg");
+    }
+  }
+}
+
 /* ========= END Section Order ========= */

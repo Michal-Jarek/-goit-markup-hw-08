@@ -108,6 +108,7 @@ img {
 }
 
 /* ====================== Main Container ===================== */
+/*
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -116,7 +117,37 @@ img {
   margin: 0 auto;
 }
 
+
+
+
+*/
 /* ============= END Main Container ============ */
+.container {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+}
 /* =================== BACKDROP ==================*/
 .backdrop {
   width: 100%;
@@ -517,11 +548,14 @@ img {
 /* ========================= Section Description ====================== */
 .list-description {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: inherit;
   justify-content: space-between;
 }
 .list-description__box {
-  max-width: 270px;
+  max-width: 450px;
+  margin-bottom: 30px;
 }
 .list-description__element {
   display: flex;
@@ -543,6 +577,8 @@ img {
   line-height: var(--line-height-small);
   margin-bottom: 10px;
   font-size: 14px;
+  text-align: center;
+  width: 100%;
 }
 .list-description__paragraph {
   font-size: 14px;
@@ -551,7 +587,22 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* ========== END Section Description ======== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .list-description__box {
+    max-width: 354px;
+  }
+  .list-description__header {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-description__box {
+    max-width: 270px;
+  }
+  .list-description__header {
+    text-align: left;
+  }
+}
 /* =========================  SECTION TEAM ========================== */
 .section-team {
   background-color: var(--team-bg-color);
@@ -771,25 +822,61 @@ img {
 
 /* ========================= Section Order ====================== */
 .section-order {
-  padding: 200px 0;
+  padding: 118px 0;
   background-color: var(--dark-motive);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/background.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_mobile_bg_480.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center center;
 }
 .section-order__header {
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.364;
+  text-align: center;
+  line-height: 1.615;
   color: var(--logo-white-color);
   letter-spacing: 0.06em;
   margin-bottom: 30px;
-  width: 696px;
+  max-width: 365px;
 }
 .section-order__container {
   flex-direction: column;
   text-align: center;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_mobile_bg_480@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .section-order {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_mobile_bg_768.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_mobile_bg_768@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-order {
+    padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_desk_bg_1600.jpg");
+  }
+  .section-order__header {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.364;
+    color: var(--logo-white-color);
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
+    max-width: 696px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section-order {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/studio/section_order/order_desk_bg_1600@2x.jpg");
+  }
+}
 /* ========= END Section Order ========= *//*# sourceMappingURL=main.css.map */
