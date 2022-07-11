@@ -58,13 +58,16 @@
     }
   }
 }
-  @media screen and (min-width: 1200px) {
-    .list-description {
-      &__box {
-        max-width: 270px;
-      }
-       &__header {
+@media screen and (min-width: 1200px) {
+  .list-description {
+    &__box {
+      max-width: 270px;
+    }
+    &__header {
       text-align: left;
     }
-    }
   }
+  .section-description {
+    padding: 94px 0;
+  }
+}

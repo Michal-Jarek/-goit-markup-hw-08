@@ -89,7 +89,7 @@ img {
 }
 
 .section-order, .section-customers, .section-references, .section-team, .section-description {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .section-customers__header, .section-team__header, .section-about-us__header {
@@ -602,6 +602,9 @@ img {
   .list-description__header {
     text-align: left;
   }
+  .section-description {
+    padding: 94px 0;
+  }
 }
 /* =========================  SECTION TEAM ========================== */
 .section-team {
@@ -612,14 +615,16 @@ img {
 }
 .section-team__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-top: 50px;
-  width: inherit;
-  padding: inherit;
+  max-width: 450px;
 }
 .section-team__element {
   background-color: var(--logo-white-color);
-  width: 270px;
+  width: inherit;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .section-team__img {
@@ -682,22 +687,27 @@ img {
 }
 .section-customers__customers-list {
   padding: inherit;
-  margin-top: 50px;
 }
 
 .customers-list {
   display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: inherit;
+  max-width: 450px;
+  padding: 0;
 }
 .customers-list__element {
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
+  margin-top: 30px;
 }
 .customers-list__link {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
   padding: 16px 32px;
   fill: rgb(175, 177, 184);
   border: 1px solid rgb(175, 177, 184);
@@ -714,6 +724,23 @@ img {
   height: 60px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .customers-list {
+    max-width: 738px;
+  }
+  .customers-list__element {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers-list {
+    max-width: 1170px;
+    width: inherit;
+  }
+  .customers-list__element {
+    width: 170px;
+  }
+}
 /* ============== END SECTION CUSTOMERS ============= */
 /* ================== FORM ===================== */
 .long-form {
