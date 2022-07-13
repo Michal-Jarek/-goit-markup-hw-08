@@ -17,7 +17,7 @@
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 450px;
   padding: 0;
   &__element {
@@ -49,7 +49,12 @@
     height: 60px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 480px){
+  .customers-list {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px){
   .customers-list {
     max-width: 738px;
     &__element {
@@ -67,49 +72,5 @@
     }
   }
 }
-// .section-customers{
-//   @extend %section;
-//   &__container{
-//     flex-direction: column;
-//   }
-//   &__header{
-//     @extend %second-header;
-//   }
-//   &__customers-list{
-//     padding: inherit;
-//     margin-top: 50px;
-//   }
-// }
 
-// .customers-list {
-//   @extend %lists;
-//   display: flex;
-//   justify-content: space-between;
-//   width: inherit;
-//   &__element{
-//     display: flex;
-//     width: 170px;
-//     height: 92px;
-//   }
-//   &__link{
-//     width:100%;
-//     height: 100%;
-//     padding: 16px 32px;
-//     fill: rgba(175, 177, 184, 1);
-//     border: 1px solid rgba(175, 177, 184, 1);
-//     border-radius: 3px;
-//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-//     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//     &:hover,
-//     &:focus{
-//       fill: var(--main-color);
-//       border: 1px solid var(--main-color);
-//       outline: none;
-//     }
-//   }
-//   &__icon{
-//     width: 106px;
-//     height: 60px;
-//   }
-// }
 /* ============== END SECTION CUSTOMERS ============= */
