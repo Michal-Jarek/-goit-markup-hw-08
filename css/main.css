@@ -587,7 +587,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .list-description__box {
     max-width: 354px;
   }
@@ -613,6 +613,9 @@ img {
 .section-team__container {
   flex-direction: column;
 }
+.section-team__header {
+  margin-bottom: 30px;
+}
 .section-team__list {
   display: flex;
   flex-direction: row;
@@ -621,15 +624,18 @@ img {
   justify-content: center;
   margin-top: 50px;
   max-width: 450px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .section-team__element {
+  margin-left: 30px;
+  margin-top: 30px;
   background-color: var(--logo-white-color);
-  width: inherit;
+  max-width: inherit;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .section-team__img {
-  width: 270px;
-  height: 260px;
+  max-width: 450px;
 }
 .section-team__figcaption {
   padding: 30px 0 0 0;
@@ -647,6 +653,19 @@ img {
   margin: 16px 32px 18px 32px;
 }
 
+@media screen and (min-width: 768px) {
+  .section-team__list {
+    max-width: calc(100% + 30px);
+  }
+  .section-team__img {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-team__img {
+    max-width: 270px;
+  }
+}
 /* ================ END SECTION TEAM ============== */
 /* ==================== FOoter =============== */
 .page-footer {

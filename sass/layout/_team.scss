@@ -7,6 +7,7 @@
   }
   &__header {
     @extend %second-header;
+    margin-bottom: 30px;
   }
   &__list {
     @extend %lists;
@@ -17,17 +18,19 @@
     justify-content: center;
     margin-top: 50px;
     max-width: 450px;
+    margin-left: -30px;
+    margin-top: -30px;
   }
   &__element {
+    margin-left: 30px;
+    margin-top: 30px;
     background-color: var(--logo-white-color);
-    width: inherit;
+    max-width: inherit;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 1px 2px 0 rgba(0, 0, 0, 0.2);
   }
   &__img {
-    
-    width: 270px;
-    height: 260px;
+    max-width: 450px;
   }
   &__figcaption {
     padding: 30px 0 0 0;
@@ -35,60 +38,31 @@
     line-height: var(--line-height-small);
     color: var(--nav-second-color);
   }
-  &__name{
+  &__name {
     display: block;
     font-weight: 500;
     color: var(--main-txt-color);
     margin-bottom: 10px;
   }
-  &__social-list{
+  &__social-list {
     margin: 16px 32px 18px 32px;
   }
 }
-
-
-
-// .section-team {
-//   @extend %section;
-//   background-color: var(--team-bg-color);
-//   &__container {
-//     flex-direction: column;
-//   }
-//   &__header {
-//     @extend %second-header;
-//   }
-//   &__list {
-//     @extend %lists;
-//     display: flex;
-//     justify-content: space-between;
-//     margin-top: 50px;
-//     width: inherit;
-//     padding: inherit;
-//   }
-//   &__element {
-//     background-color: var(--logo-white-color);
-//     width: 270px;
-//     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-//       0 1px 2px 0 rgba(0, 0, 0, 0.2);
-//   }
-//   &__img {
-//     width: 270px;
-//     height: 260px;
-//   }
-//   &__figcaption {
-//     padding: 30px 0 0 0;
-//     text-align: center;
-//     line-height: var(--line-height-small);
-//     color: var(--nav-second-color);
-//   }
-//   &__name{
-//     display: block;
-//     font-weight: 500;
-//     color: var(--main-txt-color);
-//     margin-bottom: 10px;
-//   }
-//   &__social-list{
-//     margin: 16px 32px 18px 32px;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .section-team {
+    &__list {
+      max-width: calc(100% + 30px);
+    }
+    &__img {
+      max-width: 354px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-team {
+    &__img {
+      max-width: 270px;
+    }
+  }
+}
 /* ================ END SECTION TEAM ============== */
