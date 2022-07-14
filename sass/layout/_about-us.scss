@@ -1,5 +1,6 @@
 /* ================== SECTION ABOUT US ===================== */
 .section-about-us{
+  display:none;
   margin-bottom: 94px;
   &__container{
     flex-direction: column;
@@ -34,5 +35,10 @@
     position: absolute;
     background-color: rgba(47, 48, 58, 0.8);
   } 
+}
+@media screen and (min-width:1200px){
+  .section-about-us{
+    display:block;
+  }
 }
 /* ================== END SECTION ABOUT US ===================== */
