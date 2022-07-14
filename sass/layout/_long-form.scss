@@ -5,9 +5,12 @@
   align-items: center;
   margin: 40px;
   &__field{
+    display:flex;
+    flex-direction: column;
     border: 0;
     margin: 0;
     padding: 0;
+    max-width: 448px;
   }
   &__header {
     font-size: 20px;
@@ -35,7 +38,7 @@
     }
   }
   &__input {
-    width: 448px;
+    width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 11px 12px 11px 42px;
@@ -47,6 +50,7 @@
       padding-left: 12px;
     }
     &--textarea {
+      width: 100%;
       resize: none;
     }
   }
@@ -64,6 +68,7 @@
       &:hover {
       background-color: rgba(33, 150, 243, 0.4);
       color: var(--main-txt-color);
+      
       }
     }
 }

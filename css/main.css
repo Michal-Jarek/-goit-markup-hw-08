@@ -107,21 +107,7 @@ img {
   color: var(--logo-white-color);
 }
 
-/* ====================== Main Container ===================== */
-/*
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-}
-
-
-
-
-*/
-/* ============= END Main Container ============ */
+/* ====================== Containers ===================== */
 .container {
   width: 100%;
   padding: 0 10px;
@@ -148,6 +134,7 @@ img {
     padding: 0 15px;
   }
 }
+/* ============= END MContainers ============ */
 /* =================== BACKDROP ==================*/
 .backdrop {
   width: 100%;
@@ -169,7 +156,8 @@ img {
 }
 
 .modal {
-  width: 528px;
+  width: calc(100% - 40px);
+  max-width: 528px;
   min-height: 581px;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
@@ -861,9 +849,12 @@ img {
   margin: 40px;
 }
 .long-form__field {
+  display: flex;
+  flex-direction: column;
   border: 0;
   margin: 0;
   padding: 0;
+  max-width: 448px;
 }
 .long-form__header {
   font-size: 20px;
@@ -891,7 +882,7 @@ img {
   outline: none;
 }
 .long-form__input {
-  width: 448px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 11px 12px 11px 42px;
@@ -904,6 +895,7 @@ img {
   padding-left: 12px;
 }
 .long-form__input--textarea {
+  width: 100%;
   resize: none;
 }
 .long-form__icon {
