@@ -1,7 +1,7 @@
 /* ======================= Short Contact ================= */
 .short-adress {
   @extend %lists;
-  display: flex;
+  display: none;
   &__item {
     fill: rgba(117, 117, 117, 1);
     color: rgba(117, 117, 117, 1);
@@ -25,6 +25,17 @@
   }
   &__icon {
     margin-right: 10px;
+  }
+}
+@media screen and (min-width: 768px){
+  .short-adress{
+    display:flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px){
+  .short-adress{
+    flex-direction: row;
   }
 }
 /* ============ End Short Contact ============ */
