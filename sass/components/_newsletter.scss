@@ -1,13 +1,16 @@
 /*====================== NEWSLETTER ==============*/
 .newsletter {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
-  &__label{
-    flex-grow: 1;
+  &__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  &__header{
-    display: block;
+  &__header {
     color: var(--logo-white-color);
     font-size: 14px;
     font-weight: 700;
@@ -15,41 +18,52 @@
     letter-spacing: 0.03em;
     text-align: left;
     text-transform: uppercase;
-    margin-bottom: 20px;
   }
-  &__email-input{
-    flex-grow: 1;
-    padding: 15px 0 15px 16px;
+  &__email-input {
+    width: 100%;
+    padding: 15px 16px;
+    margin: 20px 0;
     line-height: 1.25;
     letter-spacing: 0.03em;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: transparent;
-    width: calc(100% - 12px);
     height: 50px;
     color: rgba(255, 255, 255, 0.3);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover, &:focus{
-       outline: none;
-       border: 1px solid var(--main-color);
-       color: rgba(255, 255, 255, 1);
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid var(--main-color);
+      color: rgba(255, 255, 255, 1);
     }
   }
-  &__icon{
+  &__icon {
     width: 24px;
     height: 24px;
     position: absolute;
     top: 13px;
     right: 28px;
   }
-  &__button{
+  &__button {
     position: relative;
-    bottom: -36px;
     height: 50px;
+    width: 200px;
     text-align: left;
     padding: 0 0 0 42px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .newsletter {
+    &__button {
+      top: 8px;
+      margin-left: 12px;
+    }
+    &__label {
+      align-items: flex-start;
+    }
   }
 }
 /*====================== END NEWSLETTER ==============*/
