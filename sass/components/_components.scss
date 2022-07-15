@@ -23,17 +23,15 @@
   &__icon {
     margin-right: 10px;
   }
- 
 }
-@media screen and (min-width: 768px){
-  .short-adress{
-    display:flex;
+@media screen and (min-width: 768px) {
+  .short-adress {
+    display: flex;
     flex-direction: column;
-    
   }
 }
-@media screen and (min-width: 1200px){
-  .short-adress{
+@media screen and (min-width: 1200px) {
+  .short-adress {
     flex-direction: row;
     min-width: 320px;
     justify-content: space-between;
