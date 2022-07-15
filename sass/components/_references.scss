@@ -7,6 +7,7 @@
   justify-content: flex-start;
   margin-left: -30px;
   margin-top: -30px;
+  max-width: 450px;
   &__element {
     margin-left: 30px;
     margin-top: 30px;
@@ -32,19 +33,6 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .references-list {
-    &__element {
-      max-width: 354px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    .references-list {
-      &__element {
-        max-width: 370px;
-      }
-    }
-  }
   /* ================ END References Components =================== */
 
   /* ============================ BOX-HIDDEN =============================== */
@@ -52,10 +40,11 @@
     display: block;
     height: 294px;
     overflow: hidden;
-    width: 450px;
+    max-width: 450px;
 
     &__hidden {
-      height: 100%;
+      display:block;
+      height: 294px;
       width: 100%;
       font-size: 18px;
       font-weight: 400;
@@ -66,20 +55,33 @@
       color: #fff;
       background-color: rgba(33, 150, 243, 0.9);
       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      
+    }
+    &__img{
+      width: inherit;
+      height: inherit;
     }
     &:hover &__hidden {
       transform: translatey(-100%);
     }
   }
-}
+
 @media screen and (min-width: 768px) {
   .box-hidden {
     width: 354px;
+    &__hidden{
+       height: 100%;
+      width: 100%;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
   .box-hidden {
     width: 370px;
+    &__hidden{
+       height: 100%;
+      width: 100%;
+    }
   }
 }
 /* ======================= END BOX-HIDDEN ====================== */

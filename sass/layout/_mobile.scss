@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 40px 48px;
+  padding: 48px 40px;
   background-color: var(--logo-white-color);
   z-index: 999;
   transform: translateX(100%);
@@ -79,6 +79,7 @@
 .mobile-social {
   @extend %lists;
   display: flex;
+  flex-wrap: wrap;
   &__item {
     &:not(:first-of-type) {
       margin-left: 10px;
