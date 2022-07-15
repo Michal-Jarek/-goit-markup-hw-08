@@ -1,15 +1,14 @@
 /* ---------- Navigation section --------- */
-.navigation{
+.navigation {
   flex-grow: 1;
-  
-  
 }
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @extend %lists;
   &__item {
-    @extend %lists;
+    
     &--active {
       color: var(--main-color);
       position: relative;
@@ -21,7 +20,6 @@
       background-color: var(--main-color);
       display: block;
       position: absolute;
-      bottom: -31px;
       border-radius: 2px;
     }
   }
@@ -37,5 +35,25 @@
     }
   }
 }
-
+@media screen and (min-width: 768px) {
+  .menu {
+    &__item {
+      &--active::after {
+        bottom: -36px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    max-width: 254px;
+    margin-left: 93px;
+    justify-content: space-between;
+    &__item {
+      &--active::after {
+        bottom: -32px;
+      }
+    }
+  }
+}
 /* ---------- Navigation section end------ */
