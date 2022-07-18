@@ -1,6 +1,6 @@
 /* ============================ Mobile menu ===================== */
 .menu-container {
-  position: fixed;
+   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -8,10 +8,18 @@
   padding: 48px 40px;
   background-color: var(--logo-white-color);
   z-index: 999;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   &.is-open {
-    transform: translateX(0);
+   -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   }
   & .menu-toggle {
     position: absolute;
@@ -51,10 +59,15 @@
 }
 .mobile-adress {
   @extend %lists;
-  margin-top: 302px;
+   margin-top: 302px;
   margin-bottom: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
   &__item {
     &:first-of-type {
@@ -78,8 +91,11 @@
 }
 .mobile-social {
   @extend %lists;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   &__item {
     &:not(:first-of-type) {
       margin-left: 10px;

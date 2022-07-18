@@ -3,6 +3,19 @@
   @extend %section;
   padding: 118px 0;
   background-color: var(--dark-motive);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(47, 48, 58, 0.4)),
+      to(rgba(47, 48, 58, 0.4))
+    ),
+    url("../images/studio/section_order/order_mobile_bg_480.jpg");
+  background-image: -o-linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/studio/section_order/order_mobile_bg_480.jpg");
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)

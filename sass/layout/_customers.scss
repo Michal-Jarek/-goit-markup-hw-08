@@ -2,6 +2,9 @@
 .section-customers {
   @extend %section;
   &__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   &__header {
@@ -14,13 +17,20 @@
 
 .customers-list {
   @extend %lists;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   max-width: 450px;
   padding: 0;
   &__element {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 210px;
     height: 92px;
@@ -29,12 +39,20 @@
   &__link {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 16px 32px;
-    fill: rgba(175, 177, 184, 1);
-    border: 1px solid rgba(175, 177, 184, 1);
+    fill: rgb(175, 177, 184);
+    border: 1px solid rgb(175, 177, 184);
     border-radius: 3px;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
@@ -49,12 +67,14 @@
     height: 60px;
   }
 }
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
   .customers-list {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .customers-list {
     max-width: 738px;
     &__element {

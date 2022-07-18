@@ -2,11 +2,12 @@
 .section-references {
   @extend %section;
   &__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
-.section-references__buttons-list{
-    margin-bottom: 34px;
+.section-references__buttons-list {
+  margin-bottom: 34px;
 }
-
-

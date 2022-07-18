@@ -6,6 +6,10 @@
     fill: rgba(117, 117, 117, 1);
     color: rgba(117, 117, 117, 1);
     line-height: var(--line-height-small);
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -26,15 +30,25 @@
 }
 @media screen and (min-width: 768px) {
   .short-adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {
   .short-adress {
-    flex-direction: row;
+     -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     min-width: 320px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /* ============ End Short Contact ============ */
@@ -42,9 +56,16 @@
 /* ===================== LONG Company ADRESS ============ */
 .long-adress {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 
   &__logo {
     display: block;
@@ -58,8 +79,10 @@
 }
 @media screen and (min-width: 1200px) {
   .long-adress {
-    max-width: 246px;
-    align-items: flex-start;
+   max-width: 246px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .company-adress {
@@ -68,9 +91,16 @@
   line-height: var(--line-height-big);
   &__list {
     @extend %lists;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   }
   &__item:not(:last-child) {
     margin-bottom: 9px;
@@ -86,7 +116,9 @@
 @media screen and (min-width: 1200px) {
   .company-adress {
     &__list {
-      align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     }
   }
 }

@@ -2,8 +2,13 @@
 
 .references-list {
   @extend %lists;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin-left: -30px;
   margin-top: -30px;
@@ -11,8 +16,15 @@
     margin-left: 30px;
     margin-top: 30px;
     max-width: 450px;
+    -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
+      -webkit-box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
       box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
     }
@@ -32,44 +44,50 @@
   }
 }
 
-  /* ================ END References Components =================== */
+/* ================ END References Components =================== */
 
-  /* ============================ BOX-HIDDEN =============================== */
-  .box-hidden {
+/* ============================ BOX-HIDDEN =============================== */
+.box-hidden {
+  display: block;
+  height: 294px;
+  overflow: hidden;
+  max-width: 450px;
+
+  &__hidden {
     display: block;
     height: 294px;
-    overflow: hidden;
-    max-width: 450px;
-
-    &__hidden {
-      display:block;
-      height: 294px;
-      width: 100%;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.555;
-      letter-spacing: 0.03em;
-      text-align: left;
-      padding: 49px 45px 49px 24px;
-      color: #fff;
-      background-color: rgba(33, 150, 243, 0.9);
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      
-    }
-    &__img{
-      width: inherit;
-      height: inherit;
-    }
-    &:hover &__hidden {
-      transform: translatey(-100%);
-    }
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.555;
+    letter-spacing: 0.03em;
+    text-align: left;
+    padding: 49px 45px 49px 24px;
+    color: #fff;
+    background-color: rgba(33, 150, 243, 0.9);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  &__img {
+    width: inherit;
+    height: inherit;
+  }
+  &:hover &__hidden {
+    -webkit-transform: translatey(-100%);
+    -ms-transform: translatey(-100%);
+    transform: translatey(-100%);
+  }
+}
 
 @media screen and (min-width: 768px) {
   .box-hidden {
     width: 354px;
-    &__hidden{
-       height: 100%;
+    &__hidden {
+      height: 100%;
       width: 100%;
     }
   }
@@ -77,8 +95,8 @@
 @media screen and (min-width: 1200px) {
   .box-hidden {
     width: 370px;
-    &__hidden{
-       height: 100%;
+    &__hidden {
+      height: 100%;
       width: 100%;
     }
   }
